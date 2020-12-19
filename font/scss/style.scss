@@ -1,0 +1,71 @@
+@import '_variable';
+
+body{
+    align-items: center;
+    background-color: red;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.informacoes{
+    background-color: #fdfdfd;
+    border: 10px inset gray;
+    display: block;
+    font-family: $font-principal;
+    height: auto;
+    padding: .8em;
+    text-align: center;
+    width: auto;
+    h1{
+        color: red;
+        margin: .7em 0;
+    }
+    span{
+        color: $cor-span;
+    }
+}
+.informacoes__api{
+    color: $cor-principal;
+    font-size: 1.05em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: .8em 0;
+    width: 100%;
+}
+span:nth-of-type(3)::after{
+    padding-left: .3em;
+}
+span.celsius:nth-of-type(3)::after{
+    content: '° C';
+}
+span.fahrenheit:nth-of-type(3)::after{
+    content: '° F';
+}
+
+
+.graus{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+[data-button]{
+    background-color: #4F0000;
+    border: hidden;
+    border-radius: 5px;
+    color: #fdfdfd;
+    cursor: pointer;
+    margin: .7rem auto .7em auto;
+    padding: .5rem;
+    transition: .5s ease-in-out;
+    width: 100px;
+    &:hover{
+        box-shadow: -3px 3px 4px black;
+    }
+}
+
+
+@media screen and (min-width: 700px){
+    .informacoes__api{
+        min-width: 600px;
+    }
+}

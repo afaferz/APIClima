@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,28 +11,33 @@
     <section class="informacoes">
         <h1>Clima do Dia</h1>
         <p class="informacoes__api">cidade</p>
-        <span data-cidade></span>
+        <span data-cidade>brasília</span>
         <p class="informacoes__api">clima</p>
-        <span data-clima></span>
+        <span data-clima>chuvoso</span>
         <p class="informacoes__api">graus</p>
-        <span class="celsius" data-graus></span>
+        <span class="celsius" data-graus>36</span>
         <br/>
         <div class="graus">
             <button data-button="Fahrenheit">Fahrenheit</button>
             <button data-button="Celsius">Celsius</button>
         </div>  
-        <span></span>
+        <span>a</span>
     </section>
 
     <script src="./js/app/controller/ClimaController.js"></script>
     <script src="./js/app/model/Clima.js"></script>
     <script src="./js/app/helpers/ConvertGraus.js"></script>
     <script src="./js/app/view/ClimaView.js"></script>
-    <script src="./js/data.js"></script>
     <script>
         let cc = new ClimaController();
         let divGraus = document.querySelector('.graus');
-        cc._unify();
+        cc._converterClima();
+
+        // let button = document.querySelectorAll('[data-button]');
+        
+        // button.forEach((e)=>{
+        //     e.addEventListener('click', cc._converterClima());
+        // });
     </script>
 </body>
 </html>

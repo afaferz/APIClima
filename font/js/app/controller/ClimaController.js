@@ -13,10 +13,8 @@ class ClimaController {
     _receberClima(){
         this._resultClima = 
         fetch('https://api.openweathermap.org/data/2.5/weather?q=Brasilia&appid=8b262d3cb91d271154c37d223350e878&lang=pt_br&units=metric')
-        .then(r => r.json())
+        .then(response => response.json())
         .then(clima => {
-            console.log(clima)
-            // clima.BRL;
 
             //Insere os dados da API na página
             this._climaView.adicionar(this._clima, clima);

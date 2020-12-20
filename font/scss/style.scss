@@ -32,6 +32,9 @@ body{
     margin: .8em 0;
     width: 100%;
 }
+span:nth-of-type(2){
+    text-transform: capitalize;
+}
 span:nth-of-type(3)::after{
     padding-left: .3em;
 }

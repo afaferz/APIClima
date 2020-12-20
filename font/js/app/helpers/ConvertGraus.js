@@ -4,7 +4,7 @@ class ConvertGraus {
     }
 
     get _celsiusToFahrenheit(){
-        return (this._graus * 1.8) + 32;
+        return Math.round((this._graus * 1.8) + 32);
     }
     get _celsius(){
         return this._graus;

@@ -9,7 +9,18 @@ class ClimaView{
         return this._classesGraus;
     }
 
-    _template(model, botao){
+    //Modificações da View
+    _template(model, APIObject){
+        model._cidade.innerHTML = APIObject.name;
+        model._clima.innerHTML = APIObject.weather[0].description;
+        model._graus.innerHTML = Math.round(APIObject.main.temp);    
+    }
+
+    adicionar(model, APIObject){
+        return this._template(model, APIObject)
+    }
+
+    _templateGrauConvertido(model, botao){
         //Pega o valor do textContent do span 'graus'
         this.elementoClima._graus.textContent = model;
         
@@ -24,7 +35,7 @@ class ClimaView{
         }
     }
 
-    update(model, botao){
-        return this._template(model, botao);
+    updateGraus(model,botao){
+        return this._templateGrauConvertido(model,botao);
     }
 }

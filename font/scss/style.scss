@@ -1,14 +1,35 @@
 @import '_variable';
 
-body{
+.body{
     align-items: center;
-    background-color: red;
+    background-color: #4F0000;
     display: flex;
     height: 100vh;
     justify-content: center;
+    &.nublado{
+        background-color: $nublado;
+    }
+    &.limpo{
+        background-color: $limpo;
+    }
+    &.chuvoso{
+        background-color: $chuvoso;
+    }
+    &.frio{
+        background-color: $frio;
+    }
+}
+.clima_design{
+    height: 100%;
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .informacoes{
     background-color: #fdfdfd;
+    box-shadow: -3px 3px 18px rgba(0,0,0,0.5);
     border: 10px inset gray;
     display: block;
     font-family: $font-principal;
@@ -16,6 +37,7 @@ body{
     padding: .8em;
     text-align: center;
     width: auto;
+    z-index: 1;
     h1{
         color: red;
         margin: .7em 0;

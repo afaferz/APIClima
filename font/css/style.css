@@ -6,22 +6,40 @@
   box-sizing: border-box;
   outline: none; }
 
-body {
+.body {
   align-items: center;
-  background-color: red;
+  background-color: #4F0000;
   display: flex;
   height: 100vh;
   justify-content: center; }
+  .body.nublado {
+    background-color: #3ec1d3; }
+  .body.limpo {
+    background-color: #a6d0e4; }
+  .body.chuvoso {
+    background-color: #404b69; }
+  .body.frio {
+    background-color: #dbedf3; }
+
+.clima_design {
+  height: 100%;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
 .informacoes {
   background-color: #fdfdfd;
+  box-shadow: -3px 3px 18px rgba(0, 0, 0, 0.5);
   border: 10px inset gray;
   display: block;
   font-family: "Libre Baskerville", serif;
   height: auto;
   padding: .8em;
   text-align: center;
-  width: auto; }
+  width: auto;
+  z-index: 1; }
   .informacoes h1 {
     color: red;
     margin: .7em 0; }
